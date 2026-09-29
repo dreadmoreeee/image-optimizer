@@ -1,0 +1,16 @@
+# Example only (not active): check in a GitHub Actions job that images under
+# assets/ optimize cleanly. Copy to .github/workflows/ in YOUR repo to use it.
+name: images
+on: [pull_request]
+jobs:
+  optimize-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install image-optimizer numpy
+      - name: Dry run (writes nothing)
+        run: python -m image_optimizer assets/ -o build/img --dry-run --json > report.json
+      - uses: actions/upload-artifact@v4
+        with: { name: image-report, path: report.json }

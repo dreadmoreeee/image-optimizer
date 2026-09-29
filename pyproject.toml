@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-optimizer"
+version = "1.0.0"
+description = "Batch-optimize images for the web: resize, WebP/AVIF at a target SSIM, <picture> snippets."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Marvin Palencia" }]
+dependencies = ["Pillow>=10.0"]
+
+[project.optional-dependencies]
+fast = ["numpy"]
+avif = ["pillow-avif-plugin"]
+test = ["pytest", "numpy"]
+
+[project.scripts]
+image-optimizer = "image_optimizer.cli:main"
+
+[tool.setuptools]
+packages = ["image_optimizer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,239 @@
+{
+  "tool": "image-optimizer",
+  "version": "1.0.0",
+  "dry_run": false,
+  "settings": {
+    "widths": [
+      480,
+      768,
+      1200,
+      1600
+    ],
+    "formats": [
+      "webp",
+      "avif"
+    ],
+    "ssim_target": 0.95,
+    "min_quality": 30,
+    "max_quality": 95,
+    "sizes": "(max-width: 1200px) 100vw, 1200px",
+    "ssim_backend": "numpy"
+  },
+  "avif_support": "native",
+  "notes": [],
+  "images": [
+    {
+      "source": "demo\\input\\blobs.jpg",
+      "source_bytes": 399249,
+      "source_width": 2400,
+      "source_height": 1600,
+      "icc_profile_kept": false,
+      "animated_source": false,
+      "outputs": [
+        {
+          "path": "blobs-480.webp",
+          "width": 480,
+          "height": 320,
+          "format": "webp",
+          "quality": 30,
+          "ssim": 0.9865,
+          "bytes": 2850,
+          "met_target": true
+        },
+        {
+          "path": "blobs-480.avif",
+          "width": 480,
+          "height": 320,
+          "format": "avif",
+          "quality": 30,
+          "ssim": 0.992,
+          "bytes": 2228,
+          "met_target": true
+        },
+        {
+          "path": "blobs-768.webp",
+          "width": 768,
+          "height": 512,
+          "format": "webp",
+          "quality": 30,
+          "ssim": 0.9878,
+          "bytes": 4908,
+          "met_target": true
+        },
+        {
+          "path": "blobs-768.avif",
+          "width": 768,
+          "height": 512,
+          "format": "avif",
+          "quality": 30,
+          "ssim": 0.9914,
+          "bytes": 3201,
+          "met_target": true
+        },
+        {
+          "path": "blobs-1200.webp",
+          "width": 1200,
+          "height": 800,
+          "format": "webp",
+          "quality": 30,
+          "ssim": 0.9842,
+          "bytes": 8418,
+          "met_target": true
+        },
+        {
+          "path": "blobs-1200.avif",
+          "width": 1200,
+          "height": 800,
+          "format": "avif",
+          "quality": 30,
+          "ssim": 0.9867,
+          "bytes": 4764,
+          "met_target": true
+        },
+        {
+          "path": "blobs-1600.webp",
+          "width": 1600,
+          "height": 1067,
+          "format": "webp",
+          "quality": 30,
+          "ssim": 0.981,
+          "bytes": 12604,
+          "met_target": true
+        },
+        {
+          "path": "blobs-1600.avif",
+          "width": 1600,
+          "height": 1067,
+          "format": "avif",
+          "quality": 30,
+          "ssim": 0.9832,
+          "bytes": 6632,
+          "met_target": true
+        }
+      ],
+      "per_format": {
+        "webp": {
+          "largest_width": 1600,
+          "largest_bytes": 12604,
+          "saved_bytes": 386645,
+          "saved_percent": 96.8,
+          "all_variants_bytes": 28780
+        },
+        "avif": {
+          "largest_width": 1600,
+          "largest_bytes": 6632,
+          "saved_bytes": 392617,
+          "saved_percent": 98.3,
+          "all_variants_bytes": 16825
+        }
+      }
+    },
+    {
+      "source": "demo\\input\\graphic.png",
+      "source_bytes": 3489,
+      "source_width": 1000,
+      "source_height": 600,
+      "icc_profile_kept": false,
+      "animated_source": false,
+      "outputs": [
+        {
+          "path": "graphic-480.webp",
+          "width": 480,
+          "height": 288,
+          "format": "webp",
+          "quality": 30,
+          "ssim": 0.996,
+          "bytes": 1184,
+          "met_target": true
+        },
+        {
+          "path": "graphic-480.avif",
+          "width": 480,
+          "height": 288,
+          "format": "avif",
+          "quality": 30,
+          "ssim": 0.9968,
+          "bytes": 971,
+          "met_target": true
+        },
+        {
+          "path": "graphic-768.webp",
+          "width": 768,
+          "height": 461,
+          "format": "webp",
+          "quality": 30,
+          "ssim": 0.9977,
+          "bytes": 1900,
+          "met_target": true
+        },
+        {
+          "path": "graphic-768.avif",
+          "width": 768,
+          "height": 461,
+          "format": "avif",
+          "quality": 30,
+          "ssim": 0.9975,
+          "bytes": 1354,
+          "met_target": true
+        },
+        {
+          "path": "graphic-1000.webp",
+          "width": 1000,
+          "height": 600,
+          "format": "webp",
+          "quality": 30,
+          "ssim": 0.9985,
+          "bytes": 2442,
+          "met_target": true
+        },
+        {
+          "path": "graphic-1000.avif",
+          "width": 1000,
+          "height": 600,
+          "format": "avif",
+          "quality": 30,
+          "ssim": 0.9996,
+          "bytes": 1209,
+          "met_target": true
+        }
+      ],
+      "per_format": {
+        "webp": {
+          "largest_width": 1000,
+          "largest_bytes": 2442,
+          "saved_bytes": 1047,
+          "saved_percent": 30.0,
+          "all_variants_bytes": 5526
+        },
+        "avif": {
+          "largest_width": 1000,
+          "largest_bytes": 1209,
+          "saved_bytes": 2280,
+          "saved_percent": 65.3,
+          "all_variants_bytes": 3534
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "totals": {
+    "images": 2,
+    "source_bytes": 402738,
+    "outputs": 14,
+    "headline_format": "webp",
+    "per_format": {
+      "webp": {
+        "largest_variants_bytes": 15046,
+        "saved_bytes": 387692,
+        "saved_percent": 96.3,
+        "all_variants_bytes": 34306
+      },
+      "avif": {
+        "largest_variants_bytes": 7841,
+        "saved_bytes": 394897,
+        "saved_percent": 98.1,
+        "all_variants_bytes": 20359
+      }
+    }
+  }
+}
